@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,8 +12,9 @@
 <link rel="icon" href="img/logo.png">
 <style>
   :root{
-    --steel:#e8491d;
-    --steel-light:#fde2d3;
+    --steel:#d7e021;
+    --steel-dark:#63690a;
+    --steel-light:#f4f7c9;
     --ink:#1c2126;
     --ink-soft:#525b64;
     --cream:#f5f6f8;
@@ -25,8 +27,8 @@
   a{color:inherit;text-decoration:none;}
   .container{max-width:1100px;margin:0 auto;padding:0 20px;}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:.98rem;border:none;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
-  .btn-primary{background:var(--steel);color:#fff;box-shadow:0 8px 20px rgba(232,73,29,.28);}
-  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(232,73,29,.35);}
+  .btn-primary{background:var(--steel);color:var(--ink);box-shadow:0 8px 20px rgba(215,224,33,.35);}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(215,224,33,.45);}
   .btn-wide{width:100%;padding:16px 26px;font-size:1.05rem;}
 
   .urgency-bar{background:var(--ink);color:var(--steel-light);text-align:center;font-size:.85rem;font-weight:600;padding:9px 12px;}
@@ -36,13 +38,13 @@
   .brand{display:flex;align-items:center;gap:10px;}
   .brand img{width:38px;height:38px;border-radius:50%;}
   .brand-name{font-family:Georgia,serif;font-weight:700;font-size:1.05rem;color:var(--ink);}
-  .brand-name small{display:block;font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:.62rem;color:var(--steel);letter-spacing:1.3px;text-transform:uppercase;}
+  .brand-name small{display:block;font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:.62rem;color:var(--steel-dark);letter-spacing:1.3px;text-transform:uppercase;}
 
   .hero{padding:56px 0 46px;background:radial-gradient(circle at 80% 0%, var(--steel-light) 0%, var(--cream) 55%);}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;}
-  .badge{display:inline-block;background:#fff;border:1px solid var(--steel-light);color:var(--steel);font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:16px;}
+  .badge{display:inline-block;background:#fff;border:1px solid var(--steel-light);color:var(--steel-dark);font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:16px;}
   .hero h1{font-size:2.3rem;color:var(--ink);margin-bottom:16px;}
-  .hero h1 span{color:var(--steel);}
+  .hero h1 span{color:var(--steel-dark);}
   .hero p.sub{font-size:1.08rem;color:var(--ink-soft);margin-bottom:26px;max-width:520px;}
   .btn-sub{font-size:.82rem;color:var(--ink-soft);margin-top:10px;}
   .hero-cover{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(28,33,38,.18);min-height:340px;}
@@ -50,15 +52,15 @@
   .hero-cover .hc-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,33,38,.5) 0%, rgba(28,33,38,.3) 40%, rgba(28,33,38,.85) 100%);}
   .hero-cover .hc-content{position:relative;z-index:2;height:100%;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 30px;}
   .hero-cover .hc-content img.logo{width:70px;margin-bottom:16px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4));}
-  .hero-cover .hc-kicker{letter-spacing:4px;font-size:11px;font-weight:600;color:#ffd2b8;margin-bottom:10px;}
+  .hero-cover .hc-kicker{letter-spacing:4px;font-size:11px;font-weight:600;color:#eef0a8;margin-bottom:10px;}
   .hero-cover h3{color:#fff;font-size:1.5rem;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.4);}
-  .hero-cover p{color:#ffe3d1;font-size:.9rem;font-family:'Segoe UI',Arial,sans-serif;}
+  .hero-cover p{color:#eef0a8;font-size:.9rem;font-family:'Segoe UI',Arial,sans-serif;}
 
   .interior-banner{position:relative;border-radius:18px;overflow:hidden;max-width:960px;margin:0 auto;min-height:260px;box-shadow:0 14px 36px rgba(28,33,38,.12);}
   .interior-banner img{width:100%;height:260px;object-fit:cover;display:block;}
   .interior-banner .ib-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(28,33,38,.8) 0%, rgba(28,33,38,.35) 55%, rgba(28,33,38,.05) 100%);display:flex;flex-direction:column;justify-content:center;padding:0 44px;}
   .interior-banner h3{color:#fff;font-size:1.5rem;max-width:380px;margin-bottom:10px;}
-  .interior-banner p{color:#ffe3d1;font-size:.92rem;max-width:360px;}
+  .interior-banner p{color:#eef0a8;font-size:.92rem;max-width:360px;}
 
   section{padding:56px 0;}
   .section-alt{background:var(--cream-alt);}
@@ -78,7 +80,7 @@
   .cat-card{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(28,33,38,.08);padding:22px 14px;text-align:center;}
   .cat-card .cat-icon{font-size:2rem;margin-bottom:10px;}
   .cat-card strong{display:block;font-size:.86rem;color:var(--ink);margin-bottom:4px;}
-  .cat-card span{font-size:.76rem;color:var(--steel);font-weight:700;}
+  .cat-card span{font-size:.76rem;color:var(--steel-dark);font-weight:700;}
   .gallery-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:22px;}
 
   .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -89,30 +91,30 @@
 
   .includes-list{max-width:680px;margin:0 auto;}
   .includes-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.06);}
-  .includes-item .check{color:var(--steel);font-weight:800;}
+  .includes-item .check{color:var(--steel-dark);font-weight:800;}
   .includes-item span:last-child{color:var(--ink-soft);}
 
   .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto;}
   .bonus-card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 6px 18px rgba(28,33,38,.08);text-align:center;}
   .bonus-card .icon{font-size:2.2rem;margin-bottom:10px;}
-  .bonus-tag{display:inline-block;background:var(--steel-light);color:var(--steel);font-size:.72rem;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:999px;margin-bottom:10px;}
+  .bonus-tag{display:inline-block;background:var(--steel-light);color:var(--steel-dark);font-size:.72rem;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:999px;margin-bottom:10px;}
   .bonus-card h3{font-size:1.02rem;margin-bottom:6px;}
   .bonus-card p{color:var(--ink-soft);font-size:.88rem;}
 
   .flow-list{max-width:640px;margin:0 auto;counter-reset:step;}
   .flow-item{display:flex;gap:16px;align-items:flex-start;padding:14px 0;}
-  .flow-item .num{counter-increment:step;flex:0 0 32px;height:32px;border-radius:50%;background:var(--steel);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;}
+  .flow-item .num{counter-increment:step;flex:0 0 32px;height:32px;border-radius:50%;background:var(--steel);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;}
   .flow-item .num::before{content:counter(step);}
   .flow-item p{color:var(--ink-soft);font-size:.94rem;padding-top:5px;}
   .flow-item strong{display:block;color:var(--ink);font-size:.98rem;}
 
   .offer-box{max-width:520px;margin:0 auto;background:#fff;border:1.5px solid var(--steel-light);border-radius:20px;padding:32px 28px;text-align:center;box-shadow:0 14px 36px rgba(28,33,38,.1);}
-  .offer-badge{display:inline-block;background:var(--steel-light);color:var(--steel);font-size:.78rem;font-weight:800;padding:6px 14px;border-radius:999px;margin-bottom:14px;}
+  .offer-badge{display:inline-block;background:var(--steel-light);color:var(--steel-dark);font-size:.78rem;font-weight:800;padding:6px 14px;border-radius:999px;margin-bottom:14px;}
   .price-new{font-family:Georgia,serif;font-size:2.6rem;color:var(--ink);font-weight:700;margin-bottom:6px;}
   .price-new small{font-size:1.1rem;color:var(--ink-soft);}
   .offer-includes{text-align:left;margin:22px 0;list-style:none;}
   .offer-includes li{display:flex;gap:10px;padding:7px 0;color:var(--ink-soft);font-size:.92rem;}
-  .offer-includes .check{color:var(--steel);font-weight:800;}
+  .offer-includes .check{color:var(--steel-dark);font-weight:800;}
   .payment-note{font-size:.82rem;color:var(--ink-soft);margin-top:14px;}
 
   .faq-list{max-width:700px;margin:0 auto;}
