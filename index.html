@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planos para Fabricar Máquinas de Gimnasio | Campus Emprendedor</title>
+<meta name="description" content="Planos originales para fabricar tus propias máquinas de gimnasio, con medidas, materiales y guía de armado. Acceso inmediato por WhatsApp.">
+<meta property="og:title" content="Planos para Fabricar Máquinas de Gimnasio">
+<meta property="og:description" content="Armá tu propio gimnasio o fabricá para vender, con planos claros y una guía paso a paso. Acceso inmediato por WhatsApp.">
+<meta property="og:image" content="img/cover.jpg">
+<link rel="icon" href="img/logo.png">
+<style>
+  :root{
+    --steel:#e8491d;
+    --steel-light:#fde2d3;
+    --ink:#1c2126;
+    --ink-soft:#525b64;
+    --cream:#f5f6f8;
+    --cream-alt:#eceff2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Segoe UI',Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.22;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:.98rem;border:none;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-primary{background:var(--steel);color:#fff;box-shadow:0 8px 20px rgba(232,73,29,.28);}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(232,73,29,.35);}
+  .btn-wide{width:100%;padding:16px 26px;font-size:1.05rem;}
+
+  .urgency-bar{background:var(--ink);color:var(--steel-light);text-align:center;font-size:.85rem;font-weight:600;padding:9px 12px;}
+
+  header{padding:16px 0;border-bottom:1px solid rgba(0,0,0,.06);background:var(--cream);}
+  header .container{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{width:38px;height:38px;border-radius:50%;}
+  .brand-name{font-family:Georgia,serif;font-weight:700;font-size:1.05rem;color:var(--ink);}
+  .brand-name small{display:block;font-family:'Segoe UI',Arial,sans-serif;font-weight:400;font-size:.62rem;color:var(--steel);letter-spacing:1.3px;text-transform:uppercase;}
+
+  .hero{padding:56px 0 46px;background:radial-gradient(circle at 80% 0%, var(--steel-light) 0%, var(--cream) 55%);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;}
+  .badge{display:inline-block;background:#fff;border:1px solid var(--steel-light);color:var(--steel);font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:16px;}
+  .hero h1{font-size:2.3rem;color:var(--ink);margin-bottom:16px;}
+  .hero h1 span{color:var(--steel);}
+  .hero p.sub{font-size:1.08rem;color:var(--ink-soft);margin-bottom:26px;max-width:520px;}
+  .btn-sub{font-size:.82rem;color:var(--ink-soft);margin-top:10px;}
+  .hero-cover{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 50px rgba(28,33,38,.18);min-height:340px;}
+  .hero-cover img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero-cover .hc-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(28,33,38,.5) 0%, rgba(28,33,38,.3) 40%, rgba(28,33,38,.85) 100%);}
+  .hero-cover .hc-content{position:relative;z-index:2;height:100%;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 30px;}
+  .hero-cover .hc-content img.logo{width:70px;margin-bottom:16px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4));}
+  .hero-cover .hc-kicker{letter-spacing:4px;font-size:11px;font-weight:600;color:#ffd2b8;margin-bottom:10px;}
+  .hero-cover h3{color:#fff;font-size:1.5rem;margin-bottom:8px;text-shadow:0 2px 8px rgba(0,0,0,.4);}
+  .hero-cover p{color:#ffe3d1;font-size:.9rem;font-family:'Segoe UI',Arial,sans-serif;}
+
+  .interior-banner{position:relative;border-radius:18px;overflow:hidden;max-width:960px;margin:0 auto;min-height:260px;box-shadow:0 14px 36px rgba(28,33,38,.12);}
+  .interior-banner img{width:100%;height:260px;object-fit:cover;display:block;}
+  .interior-banner .ib-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(28,33,38,.8) 0%, rgba(28,33,38,.35) 55%, rgba(28,33,38,.05) 100%);display:flex;flex-direction:column;justify-content:center;padding:0 44px;}
+  .interior-banner h3{color:#fff;font-size:1.5rem;max-width:380px;margin-bottom:10px;}
+  .interior-banner p{color:#ffe3d1;font-size:.92rem;max-width:360px;}
+
+  section{padding:56px 0;}
+  .section-alt{background:var(--cream-alt);}
+  .section-title{font-size:1.85rem;text-align:center;color:var(--ink);margin-bottom:10px;}
+  .section-sub{text-align:center;color:var(--ink-soft);max-width:600px;margin:0 auto 34px;}
+
+  .problem-list{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:820px;margin:0 auto;}
+  .problem-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 4px 14px rgba(28,33,38,.06);}
+  .problem-item .x{color:#c0392b;font-weight:800;font-size:1.1rem;}
+  .problem-item p{color:var(--ink-soft);font-size:.94rem;}
+
+  .solution-grid{max-width:760px;margin:0 auto;text-align:center;}
+  .solution-grid h2{font-size:1.7rem;margin-bottom:16px;}
+  .solution-grid p{color:var(--ink-soft);margin-bottom:12px;}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;}
+  .cat-card{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(28,33,38,.08);padding:22px 14px;text-align:center;}
+  .cat-card .cat-icon{font-size:2rem;margin-bottom:10px;}
+  .cat-card strong{display:block;font-size:.86rem;color:var(--ink);margin-bottom:4px;}
+  .cat-card span{font-size:.76rem;color:var(--steel);font-weight:700;}
+  .gallery-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:22px;}
+
+  .benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .benefit-card{background:#fff;border-radius:14px;padding:22px 20px;box-shadow:0 4px 14px rgba(28,33,38,.06);}
+  .benefit-card .icon{font-size:1.6rem;margin-bottom:8px;}
+  .benefit-card h3{font-size:1.02rem;margin-bottom:6px;}
+  .benefit-card p{color:var(--ink-soft);font-size:.9rem;}
+
+  .includes-list{max-width:680px;margin:0 auto;}
+  .includes-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.06);}
+  .includes-item .check{color:var(--steel);font-weight:800;}
+  .includes-item span:last-child{color:var(--ink-soft);}
+
+  .bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto;}
+  .bonus-card{background:#fff;border-radius:16px;padding:26px 22px;box-shadow:0 6px 18px rgba(28,33,38,.08);text-align:center;}
+  .bonus-card .icon{font-size:2.2rem;margin-bottom:10px;}
+  .bonus-tag{display:inline-block;background:var(--steel-light);color:var(--steel);font-size:.72rem;font-weight:800;letter-spacing:.5px;padding:4px 10px;border-radius:999px;margin-bottom:10px;}
+  .bonus-card h3{font-size:1.02rem;margin-bottom:6px;}
+  .bonus-card p{color:var(--ink-soft);font-size:.88rem;}
+
+  .flow-list{max-width:640px;margin:0 auto;counter-reset:step;}
+  .flow-item{display:flex;gap:16px;align-items:flex-start;padding:14px 0;}
+  .flow-item .num{counter-increment:step;flex:0 0 32px;height:32px;border-radius:50%;background:var(--steel);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;}
+  .flow-item .num::before{content:counter(step);}
+  .flow-item p{color:var(--ink-soft);font-size:.94rem;padding-top:5px;}
+  .flow-item strong{display:block;color:var(--ink);font-size:.98rem;}
+
+  .offer-box{max-width:520px;margin:0 auto;background:#fff;border:1.5px solid var(--steel-light);border-radius:20px;padding:32px 28px;text-align:center;box-shadow:0 14px 36px rgba(28,33,38,.1);}
+  .offer-badge{display:inline-block;background:var(--steel-light);color:var(--steel);font-size:.78rem;font-weight:800;padding:6px 14px;border-radius:999px;margin-bottom:14px;}
+  .price-new{font-family:Georgia,serif;font-size:2.6rem;color:var(--ink);font-weight:700;margin-bottom:6px;}
+  .price-new small{font-size:1.1rem;color:var(--ink-soft);}
+  .offer-includes{text-align:left;margin:22px 0;list-style:none;}
+  .offer-includes li{display:flex;gap:10px;padding:7px 0;color:var(--ink-soft);font-size:.92rem;}
+  .offer-includes .check{color:var(--steel);font-weight:800;}
+  .payment-note{font-size:.82rem;color:var(--ink-soft);margin-top:14px;}
+
+  .faq-list{max-width:700px;margin:0 auto;}
+  details{background:#fff;border-radius:12px;padding:14px 18px;margin-bottom:10px;box-shadow:0 3px 10px rgba(28,33,38,.05);}
+  summary{cursor:pointer;font-weight:700;font-size:.96rem;}
+  details p{color:var(--ink-soft);font-size:.9rem;margin-top:10px;}
+
+  .final-cta{background:var(--ink);color:#f5f6f8;text-align:center;}
+  .final-cta h2{color:#fff;font-size:1.9rem;margin-bottom:12px;}
+  .final-cta p{color:var(--steel-light);margin-bottom:24px;max-width:560px;margin-left:auto;margin-right:auto;}
+
+  footer{padding:30px 0;text-align:center;color:var(--ink-soft);font-size:.82rem;}
+
+  .sticky-buy{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid rgba(0,0,0,.08);box-shadow:0 -6px 20px rgba(28,33,38,.1);padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(120%);transition:transform .25s ease;z-index:40;}
+  .sticky-buy.visible{transform:translateY(0);}
+  .sticky-buy .now{font-family:Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--ink);}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;}
+    .cat-grid{grid-template-columns:repeat(3,1fr);}
+    .benefits-grid{grid-template-columns:1fr 1fr;}
+    .bonus-grid{grid-template-columns:1fr;}
+    .problem-list{grid-template-columns:1fr;}
+  }
+  @media(max-width:560px){
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .benefits-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:1.85rem;}
+  }
+</style>
+</head>
+<body>
+
+<div class="urgency-bar">🏋️ Acceso inmediato por WhatsApp — sin apps, sin esperas</div>
+
+<header>
+  <div class="container">
+    <div class="brand">
+      <img src="img/logo.png" alt="Campus Emprendedor">
+      <div class="brand-name">Planos de Máquinas de Gym<small>Campus Emprendedor</small></div>
+    </div>
+    <a href="#oferta" class="btn btn-primary" id="btnHeader">Quiero mis planos</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">🔩 Planos + 3 bonos · Listos para fabricar</span>
+      <h1>Planos para <span>fabricar tus propias máquinas de gimnasio</span></h1>
+      <p class="sub">Medidas, materiales y guía de armado para construir equipamiento de gimnasio en tu taller — para tu propio gym, o para fabricar y vender.</p>
+      <a href="#oferta" class="btn btn-primary btn-wide" id="btnHero">Quiero mis planos ahora →</a>
+      <p class="btn-sub">🔒 Coordinás la compra por WhatsApp · Acceso a tu material apenas se confirma el pago</p>
+    </div>
+    <div class="hero-cover">
+      <img class="bg" src="img/hero-taller.jpg" alt="Taller de fabricación de máquinas de gimnasio">
+      <div class="hc-overlay"></div>
+      <div class="hc-content">
+        <img class="logo" src="img/logo.png" alt="Campus Emprendedor">
+        <div class="hc-kicker">CAMPUS EMPRENDEDOR</div>
+        <h3>Planos de Máquinas de Gym</h3>
+        <p>Fabricá tu propio equipamiento, paso a paso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section>
+  <div class="container">
+    <h2 class="section-title">¿Te suena familiar?</h2>
+    <p class="section-sub">Armar un gimnasio o un taller de fabricación no debería depender de improvisar sobre la marcha.</p>
+    <div class="problem-list">
+      <div class="problem-item"><span class="x">✕</span><p>Las máquinas de gimnasio importadas o de marca son carísimas, y armar tu gym o tu local te sale una fortuna.</p></div>
+      <div class="problem-item"><span class="x">✕</span><p>Tenés el taller y sabés soldar, pero no conseguís planos confiables con las medidas y los materiales bien especificados.</p></div>
+      <div class="problem-item"><span class="x">✕</span><p>Ya armaste alguna máquina "a ojo" y terminó floja, desnivelada o incómoda de usar.</p></div>
+      <div class="problem-item"><span class="x">✕</span><p>Te gustaría fabricar y vender equipamiento de gimnasio, pero no sabés por dónde arrancar ni qué cobrar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUCIÓN -->
+<section class="section-alt">
+  <div class="container solution-grid">
+    <h2>Conocé "Planos de Máquinas de Gym"</h2>
+    <p>Un pack de planos organizados por categoría, con medidas claras, materiales sugeridos y una guía de armado pensada para que puedas fabricar sin tener que adivinar nada.</p>
+    <p>Sirve tanto si querés equipar tu propio gimnasio o local, como si querés sumar una línea de fabricación de máquinas para vender.</p>
+  </div>
+</section>
+
+<!-- BANNER INTERIOR -->
+<section>
+  <div class="container">
+    <div class="interior-banner">
+      <img src="img/banner-taller.jpg" alt="Fabricación de máquinas de gimnasio en taller metalúrgico">
+      <div class="ib-overlay">
+        <h3>Planos organizados por categoría</h3>
+        <p>Piernas, pecho y espalda, brazos y hombros, multiestaciones y accesorios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<section class="gallery">
+  <div class="container">
+    <h2 class="section-title">Las categorías del pack</h2>
+    <p class="section-sub">Planos agrupados por grupo muscular y tipo de máquina.</p>
+    <div class="cat-grid">
+      <div class="cat-card"><div class="cat-icon">🦵</div><strong>Piernas y Glúteos</strong><span>Prensas, extensiones, femorales</span></div>
+      <div class="cat-card"><div class="cat-icon">💪</div><strong>Pecho y Espalda</strong><span>Bancas, remos, jalones</span></div>
+      <div class="cat-card"><div class="cat-icon">🏋️</div><strong>Brazos y Hombros</strong><span>Curl, press, elevaciones</span></div>
+      <div class="cat-card"><div class="cat-icon">🔗</div><strong>Multiestaciones</strong><span>Poleas y cross over</span></div>
+      <div class="cat-card"><div class="cat-icon">🛠️</div><strong>Racks y Accesorios</strong><span>Soportes y estructuras</span></div>
+    </div>
+    <p class="gallery-note">Cantidad exacta de planos por categoría, a confirmar según la versión final del pack.</p>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Lo que vas a lograr</h2>
+    <p class="section-sub">Máquinas sólidas, con medidas confiables, sin improvisar en el taller.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card"><div class="icon">📐</div><h3>Medidas claras</h3><p>Cada plano indica las medidas necesarias para cortar y armar sin adivinar.</p></div>
+      <div class="benefit-card"><div class="icon">🔩</div><h3>Materiales sugeridos</h3><p>Referencia de caños, planchas y accesorios para presupuestar antes de arrancar.</p></div>
+      <div class="benefit-card"><div class="icon">🏗️</div><h3>Pack completo + 3 bonos</h3><p>Planos organizados por categoría, más guías de materiales, seguridad y precios.</p></div>
+      <div class="benefit-card"><div class="icon">🎓</div><h3>Para tu taller</h3><p>Pensado para quien ya suelda o trabaja con metal, sin pasos innecesarios.</p></div>
+      <div class="benefit-card"><div class="icon">📲</div><h3>Acceso desde el celular</h3><p>Consultá tus planos donde estés, sin necesidad de imprimir nada.</p></div>
+      <div class="benefit-card"><div class="icon">♾️</div><h3>Es tuyo para siempre</h3><p>Pagás una sola vez y accedés al material cuando quieras.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ INCLUYE -->
+<section>
+  <div class="container">
+    <h2 class="section-title">¿Qué incluye el pack?</h2>
+    <p class="section-sub">Todo en formato digital, con acceso inmediato apenas confirmás tu compra.</p>
+    <div class="includes-list">
+      <div class="includes-item"><span class="check">✓</span><span>Planos de máquinas de gimnasio, organizados por categoría, con medidas y materiales sugeridos.</span></div>
+      <div class="includes-item"><span class="check">✓</span><span>Bono 1: Guía de Materiales y Presupuesto, para cotizar antes de arrancar.</span></div>
+      <div class="includes-item"><span class="check">✓</span><span>Bono 2: Checklist de Seguridad y Terminación, para revisar antes de entregar o usar la máquina.</span></div>
+      <div class="includes-item"><span class="check">✓</span><span>Bono 3: Calculadora de Costos y Precios, para saber cuánto cobrar si fabricás para vender.</span></div>
+      <div class="includes-item"><span class="check">✓</span><span>Acceso inmediato por WhatsApp apenas se confirma el pago.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BONOS -->
+<section class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Además, llevás estos 3 bonos de regalo</h2>
+    <p class="section-sub">Sin costo adicional.</p>
+    <div class="bonus-grid">
+      <div class="bonus-card">
+        <div class="icon">🧾</div>
+        <span class="bonus-tag">BONO 1</span>
+        <h3>Guía de Materiales y Presupuesto</h3>
+        <p>Qué caños, planchas e insumos necesitás, para cotizar antes de arrancar a fabricar.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="icon">🦺</div>
+        <span class="bonus-tag">BONO 2</span>
+        <h3>Checklist de Seguridad y Terminación</h3>
+        <p>Soldadura, pintura y puntos a verificar antes de dar por terminada la máquina.</p>
+      </div>
+      <div class="bonus-card">
+        <div class="icon">🧮</div>
+        <span class="bonus-tag">BONO 3</span>
+        <h3>Calculadora de Costos y Precios</h3>
+        <p>Cargá tus costos y sabé al instante cuánto cobrar si fabricás para vender.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA LA COMPRA -->
+<section>
+  <div class="container">
+    <h2 class="section-title">¿Cómo recibo mis planos?</h2>
+    <p class="section-sub">Todo el proceso se hace por WhatsApp, sin cuentas ni apps nuevas.</p>
+    <div class="flow-list">
+      <div class="flow-item"><div class="num"></div><div><strong>Escribinos por WhatsApp</strong><p>Tocás el botón "Quiero mis planos" y se abre un chat con nosotros.</p></div></div>
+      <div class="flow-item"><div class="num"></div><div><strong>Confirmás tu compra</strong><p>Te contamos el medio de pago y coordinás la transferencia.</p></div></div>
+      <div class="flow-item"><div class="num"></div><div><strong>Recibís el link de Drive</strong><p>Apenas se confirma el pago, te mandamos el acceso a los planos + los 3 bonos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="section-alt" id="oferta">
+  <div class="container">
+    <h2 class="section-title">Empezá hoy mismo</h2>
+    <p class="section-sub">Acceso completo al pack de planos + los 3 bonos de regalo.</p>
+    <div class="offer-box">
+      <span class="offer-badge">🏋️ Pack de planos + 3 bonos</span>
+      <div class="price-new">$7.500 <small>ARS</small></div>
+      <ul class="offer-includes">
+        <li><span class="check">✓</span> Planos de máquinas de gimnasio por categoría</li>
+        <li><span class="check">✓</span> Bono 1: Guía de Materiales y Presupuesto</li>
+        <li><span class="check">✓</span> Bono 2: Checklist de Seguridad y Terminación</li>
+        <li><span class="check">✓</span> Bono 3: Calculadora de Costos y Precios</li>
+        <li><span class="check">✓</span> Acceso inmediato por WhatsApp y de por vida</li>
+      </ul>
+      <a href="#" class="btn btn-primary btn-wide" id="btnOferta">Quiero mis planos por WhatsApp →</a>
+      <p class="payment-note">🔒 Coordinás el pago por transferencia, directo con nosotros por WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="faq-list">
+      <details>
+        <summary>¿Necesito saber soldar para usar estos planos?</summary>
+        <p>Sí, están pensados para quien ya trabaja con metal o tiene acceso a un taller de soldadura. No es un curso de soldadura desde cero.</p>
+      </details>
+      <details>
+        <summary>¿Los planos incluyen lista de materiales?</summary>
+        <p>Sí, cada plano indica las medidas y los materiales sugeridos (tipo de caño, plancha, etc.) para que puedas presupuestar antes de arrancar.</p>
+      </details>
+      <details>
+        <summary>¿Cómo recibo el material después de comprar?</summary>
+        <p>Todo el proceso arranca por WhatsApp: coordinás el pago por transferencia y, apenas se confirma, te mandamos el link de Drive con los planos y los 3 bonos.</p>
+      </details>
+      <details>
+        <summary>¿Funciona si lo quiero ver desde el celular?</summary>
+        <p>Sí, todo el material está en PDF (y planilla, en el caso de la calculadora) y se ve bien en celular, tablet o computadora.</p>
+      </details>
+      <details>
+        <summary>¿Es solo para Argentina o puedo usarlo en otro país?</summary>
+        <p>Los planos aplican en cualquier país. Los precios están en pesos argentinos, pero podés adaptarlos si vas a fabricar y vender en otra moneda.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Fabricá tus propias máquinas de gimnasio</h2>
+    <p>Empezá hoy con el pack de Planos de Máquinas de Gym y armá tu gimnasio, o tu taller de fabricación, con bases sólidas.</p>
+    <a href="#oferta" class="btn btn-primary" id="btnFinal">Quiero mis planos ahora →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Planos de Máquinas de Gym es un producto digital de Campus Emprendedor.</p>
+    <p>© 2026 Campus Emprendedor. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="sticky-buy" id="stickyBuy">
+  <div class="info">
+    <span class="now">$7.500 ARS</span>
+  </div>
+  <a href="#" class="btn btn-primary" id="btnSticky">Comprar por WhatsApp</a>
+</div>
+
+<script>
+  var WHATSAPP_NUMBER = "5493482203968"; // mismo número que los otros cursos
+  var WHATSAPP_MSG = "Hola! Quiero comprar el pack de Planos de Máquinas de Gym 🏋️";
+  var waLink = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MSG);
+
+  ["btnHeader","btnHero","btnOferta","btnFinal","btnSticky"].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.setAttribute("href", waLink);
+  });
+
+  (function(){
+    var bar = document.getElementById('stickyBuy');
+    var oferta = document.getElementById('oferta');
+    var hero = document.querySelector('.hero');
+    if(!bar || !oferta || !hero) return;
+    function onScroll(){
+      var heroBottom = hero.getBoundingClientRect().bottom;
+      var ofertaRect = oferta.getBoundingClientRect();
+      var ofertaVisible = ofertaRect.top < window.innerHeight && ofertaRect.bottom > 0;
+      var pastHero = heroBottom < 0;
+      if(pastHero && !ofertaVisible){ bar.classList.add('visible'); }
+      else { bar.classList.remove('visible'); }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+</script>
+
+</body>
+</html>
